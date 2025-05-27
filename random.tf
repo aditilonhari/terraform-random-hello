@@ -4,11 +4,16 @@ variable "hellos" {
     second_hello = string
   })
   description = "list of hellos"
+  default = {
+    hello = "aditi"
+    second_hello = "test"
+  }
 }
 
 variable "some_key" {
   type        = string
   description = "this is a some key"
+  default = "this is a test key"
 }
 
 resource "random_pet" "server" {
